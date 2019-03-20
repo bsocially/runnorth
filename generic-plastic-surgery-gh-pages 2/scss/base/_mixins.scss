@@ -1,0 +1,69 @@
+////================= FORM MIXINS ================================
+//-- Lato --//
+@mixin lato-1 {font-family: 'Lato', sans-serif; font-weight:100;}
+@mixin lato-1-i {@include lato-1; font-style:italic;}
+
+@mixin lato-3 {font-family: 'Lato', sans-serif; font-weight:300;}
+@mixin lato-3-i {@include lato-3; font-style:italic;}
+
+// Grid
+@mixin grid($column) {
+	  width:(100% / 12) * $column;
+	  margin:0 auto;
+}
+
+// Transition Ease
+@mixin ease($time:333ms, $attr:all, $curve:ease-in-out) {
+	  -webkit-transition: $attr $time $curve;
+	  -moz-transition: $attr $time $curve;
+	  -o-transition: $attr $time $curve;
+	  -ms-transition: $attr $time $curve;
+	  transition: $attr $time $curve;
+}
+//================================================================
+
+// Flex
+@mixin flex($direction: null, $justify: null, $align: null) {
+    display: -webkit-box;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -moz-flex-direction: $direction;
+    -ms-flex-direction: $direction;    
+    -webkit-flex-direction: $direction;    
+    flex-direction: $direction; 
+    -moz-justify-content: $justify;
+    -ms-justify-content: $justify;       
+    -webkit-justify-content: $justify;
+    justify-content: $justify;    
+    -moz-align-items: $align;
+    -ms-align-items: $align;
+    -webkit-align-items: $align;    
+    align-items: $align;    
+}
+
+// Translate (x or y)
+@mixin translate($x: null, $y: null) {
+    -ms-transform: translatex($x);
+    -webkit-transform: translatex($x);
+    transform: translatex($x);    
+    -ms-transform: translatey($y);
+    -webkit-transform: translatexy($y);
+    transform: translatey($y);    
+}
+
+// Translate (x and y)
+@mixin translatexy($x:null,$y: null) {
+    -ms-transform: translate($x , $y);
+    -webkit-transform: translate($x , $y);
+    transform: translate($x , $y);
+}
+
+// Center (replace centering with flexbox)
+@mixin center() {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translatexy(-50%,-50%);
+}

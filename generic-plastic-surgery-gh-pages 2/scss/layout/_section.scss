@@ -1,0 +1,215 @@
+
+////////////////// GENERAL SECTION //////////////////////
+/////////////////////////////////////////////////////////
+section {
+    
+    // eliminate padding for section
+    padding: 0;
+    
+    h2 {
+        text-align: center;
+        padding-top: $section-heading-top-padding;
+        padding-bottom: $section-heading-bottom-padding;
+    }
+    
+}
+/////////////////////////////////////////////////////////
+
+
+/////////////////////// GALLERY /////////////////////////
+/////////////////////////////////////////////////////////
+
+// flickity gallery
+.gallery-container {
+    
+    //side padding (away from edges)
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+// gallery cell
+.gallery-cell {
+    padding-left: $module-parallax-side-padding;
+    padding-right: $module-parallax-side-padding;
+    position: relative;
+    clear: both;
+    
+    // gallery text
+    .gallery-text-container {
+        padding: 2.5% 2.5%;
+        width: 200px;
+        
+       @media  #{$brk-1} {
+           min-width: 300px;
+       }
+       
+       @media  #{$brk-6} {
+            width: 350px;
+       }  
+        
+        h2 {
+            padding-top: $section-heading-top-padding;
+            padding-bottom: 5px;
+            text-align: center;
+            
+            @media  #{$brk-6} {
+                padding-bottom: 10px;
+            }                  
+        }
+    }
+}
+/////////////////////////////////////////////////////////
+
+
+/////////////////////  MODULES  /////////////////////////
+/////////////////////////////////////////////////////////
+// module container
+.module-container {
+    max-width: $content-max-width * 1.25;
+    margin: auto;
+
+    @media  #{$brk-7} {
+        @include flex();
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }  
+    
+    // module 1
+    #module-1 {
+        
+        // module padding
+        padding: 2.5% $module-parallax-side-padding;
+        
+        // profile image
+        img {
+            float: left;
+            padding: 0 10px 10px 0;
+            width: 125px;
+            border-radius: 25px;
+        }
+        
+        @media  #{$brk-7} {
+            width: 60%;
+            padding-right: 2.5%;
+            padding-top: 0;
+            padding-bottom: 0;
+        }  
+        
+        h2 {
+            @media  #{$brk-7} {
+                padding-top: 0;
+            }  
+        }
+    }  
+}
+/////////////////////////////////////////////////////////
+
+
+////////////////////// PARALLAXES ///////////////////////
+/////////////////////////////////////////////////////////
+// parallax
+.parallax {
+    height: 100vh;
+    min-height: $min-parallax-height;
+    max-height: $max-parallax-height;
+    // padding-left: $module-parallax-side-padding;
+    // padding-right: $module-parallax-side-padding;
+    background-size: cover;
+    clear: both;
+    
+    // to center content w/o flexbox
+    position: relative;
+    
+    @media  #{$brk-9} {
+        background-attachment: fixed; // Activate Parallax Effect
+    }  
+
+    // parallax-container
+    .parallax-container {
+        padding: 0 2.5%; // dont need top and bottom
+        width: calc(100vw - 2 * #{$module-parallax-side-padding});
+        max-height: $max-parallax-text-height;
+        max-width: $max-parallax-text-width;
+        
+        // to center in parallax div
+        @include center();
+        //-----
+        
+        h2 {
+            padding-top: $section-heading-top-padding;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+        
+        hr {
+            width: 80%;
+            margin: auto;
+            margin-top: 5px;
+            margin-bottom: 7.5px;
+            height: 1px;
+            border: 0;
+            padding: 0;
+        }
+    }
+}
+
+// parallax - 1
+#parallax-1 {
+    background-position: right;
+    
+    @media  #{$brk-9} {
+        
+    }  
+}
+
+// parallax - 2
+#parallax-2 {
+    background-position: left;
+    
+    @media  #{$brk-9} {
+        
+    }      
+}
+
+// parallax - 3
+#parallax-3 {
+    background-position: center;
+    
+    @media  #{$brk-9} {
+        
+    }  
+}
+
+// parallax - 4
+#parallax-4 {
+    background-position: center;
+    
+    @media  #{$brk-9} {
+        
+    }  
+}
+
+#parallax-container-1,
+#parallax-container-3 {
+    
+    @media  #{$brk-4} {
+        left: 35vw;
+    }
+    
+    @media  #{$brk-9} {
+        left: 25vw;
+    }      
+}
+
+#parallax-container-2,
+#parallax-container-4 {
+    
+    @media  #{$brk-4} {
+        left: 65vw;
+    } 
+    
+    @media  #{$brk-9} {
+        left: 75vw;
+    }    
+}
+/////////////////////////////////////////////////////////

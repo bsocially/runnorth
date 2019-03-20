@@ -1,0 +1,86 @@
+.gallery {
+  background: #fff;
+  max-width: $content-max-width;
+  margin: auto;
+}
+
+.gallery-container {
+    padding-top: $gallery-top-padding;
+    padding-bottom: $gallery-bottom-padding;
+}
+
+.gallery-cell {
+  width: 100%;
+  height: 300px;
+  margin-right: 10px;
+  counter-increment: gallery-cell;
+  position: relative;
+  
+  .gallery-text-container {
+    @include center(); // center without flex box -- thanks IE :(
+    }
+
+    @media  #{$brk-9} {
+        height: 350px;
+    }    
+}
+
+.image-1 {
+    background-image: url("../img/bakini-long.jpg");
+    background-size: cover;
+    background-position: right;
+        
+    .gallery-text-container {
+        @media  #{$brk-3} {
+            left: 33%;
+        }     
+    }
+}
+
+.image-2 {
+    background-image: url("../img/bakini-long.jpg");
+    background-size: cover;
+    background-position: right;
+            
+    .gallery-text-container {
+        @media  #{$brk-3} {
+            left: 33%;
+        }     
+    }
+}
+
+.image-3 {
+    background-image: url("../img/bakini-long.jpg");
+    background-size: cover;
+    background-position: right; 
+         
+    .gallery-text-container {
+        @media  #{$brk-3} {
+            left: 33%;
+        }     
+    }
+}
+
+.image-4 {
+    background-image: url("../img/bakini-long.jpg");
+    background-size: cover;
+    background-position: right;
+        
+    .gallery-text-container {
+        @media  #{$brk-3} {
+            left: 33%;
+        }
+    }
+}
+
+.image-5 {
+    background-image: url("../img/bakini-long.jpg");
+    background-size: cover;
+    background-position: right;
+        
+    .gallery-text-container {
+        @media  #{$brk-3} {
+            left: 33%;
+        }
+    }
+}

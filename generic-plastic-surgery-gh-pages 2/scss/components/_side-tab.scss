@@ -1,0 +1,29 @@
+#side-tab {
+right: -7.5px;
+bottom: 70vh;
+@include translatexy(0%, 50%);
+height: 150px;
+margin: 0;
+padding: 0;
+position: fixed;
+z-index: 9999;
+display:block;
+display: none;
+
+    @media  #{$brk-2} {
+        height: 165px;
+    }
+
+    @media  #{$brk-6} {
+        height: 175px;
+    }    
+        
+    @media  #{$brk-9} {
+        height: 190px;
+    }  
+    
+    @media  #{$height-350} {
+        bottom: 50vh;
+    }      
+}
+

@@ -1,0 +1,143 @@
+#contact {
+	margin:0 auto;
+	text-align:center;
+	width:100%;
+    padding: 2rem 10.5%;
+	max-width:$content-max-width;
+	@include lato-3;
+	color:$field-font-color;
+    
+    h2 {
+        padding-top: 0;
+        
+    }
+    
+    @media  #{$brk-7} {
+        padding: 0 2.5%;
+        padding-bottom: 25px;
+    }  
+}
+
+// Form
+form {
+		  @include grid(11);
+
+		  .field {
+			    width:100%;
+			    position:relative;
+			    margin-bottom:15px;
+
+    			$hover-label-width:30%;
+			    $placeholder-bumper:1.5%;
+			    $label-height:40px;
+
+    			// Label
+			    label {
+				      text-transform: uppercase;
+				      position:absolute;
+				      top:0;
+				      left:0;
+				      background:$primary-color;
+				      width:100%;
+                      height: $label-height;
+                      line-height: $label-height;
+				      letter-spacing: 0.075em;
+                      @include lato-3;
+				      @include ease(333ms);
+
+				      // Checkmark
+				      + span {
+					        font-family: 'SSStandard';
+					        opacity: 0;
+					        color:white;
+				        	display: block;
+					        position:absolute;
+					        top: 12px;
+					        left: 7%;
+					        // font-size: 2.5em;
+					        text-shadow:1px 2px 0 $tertiary-color;
+
+					        @include ease(333ms);
+			      	}
+			    }
+				
+    			// Fields
+		    	input[type="text"],
+			    textarea {
+				      border:none;
+				      background:$quintiary-color;
+				      width:100%;
+				      margin:0;
+				      height: $label-height;
+                      line-height: $label-height;
+				      padding-left:$hover-label-width + $placeholder-bumper;
+				      color:$primary-color;
+				      letter-spacing: 0.05em;
+                      
+                      -ms-overflow-style: none;
+                      overflow: hidden;
+						
+				      &#msg {
+					        height: $label-height;
+					        resize: none;
+					        @include ease(333ms);
+				      }
+
+      				// Focus and JS Toggle Class
+				      &:focus,
+				      &.focused {
+					        outline:none;
+
+        					&#msg {
+						          padding-bottom:150px;
+					        }
+
+        					+ label {
+						          width:$hover-label-width;
+						          background:$quartiary-color;
+						          color:$primary-color;
+					        }
+				      }
+
+      				// JS Toggle Class
+				      &.focused {
+					        + label {
+						          color: $quartiary-color;
+					        }
+				      }
+			    }
+
+    			// Field Hover
+			    &:hover {
+				      label {
+					        width:$hover-label-width;
+					        background:$primary-color;
+					        color:white;
+				      }
+			    }
+		  }
+
+		  // Submit Button
+		  input[type="submit"] {
+			    background:$quartiary-color;
+			    color:white;
+			    -webkit-appearance: none;
+			    border: none;
+			    text-transform: uppercase;
+            position:relative;
+		    padding: 13px 50px;
+            margin-top: 7.5px;
+		    letter-spacing: 0.1em;
+		    @include lato-3;
+		    @include ease;
+        
+    			&:hover {
+				      background:$primary-color;
+			    }
+
+    			&:focus {
+				      outline:none;
+				      background:$tertiary-color;
+			    }
+		  }
+}

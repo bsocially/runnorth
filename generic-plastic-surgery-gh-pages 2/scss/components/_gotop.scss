@@ -1,0 +1,29 @@
+// back to top button
+// slightly modified from original
+#go-top {
+	text-decoration: none !important;
+    background-color: #fff;
+	font-size: 12px !important;
+    width: $go-to-top-size + 5px;
+    height: $go-to-top-size + 5px;
+    margin: auto; // center horizontall w/respect to screen
+    position: relative; // to center arrow icon
+    
+    @media  #{$brk-5} {
+        width: ($go-to-top-size * 1.25) + 5px;
+        height: ($go-to-top-size * 1.25) + 5px;
+        
+    @include translatexy(0%,-5px); //elminate little line above
+    }   
+}
+
+// arrow icon
+#up-arrow {
+    color: $quintiary-color !important;
+    @include center();
+    
+    &:hover {
+        @include ease;
+        color: $quartiary-color !important;
+    }
+}

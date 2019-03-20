@@ -1,0 +1,38 @@
+footer {
+    
+    border-top: 20px solid $quintiary-color;
+    
+    // Logo Text
+    .logo-text {
+        color: $secondary-color;
+    }
+    
+    // Aesthetic Logo Text
+    #aesthetic {
+        color: $primary-color;
+    }
+    
+    // links
+    a {
+        color: $secondary-color;
+ 
+        // font awesome links
+        .fa {
+            color: $primary-color;
+        }
+        
+        // links - hover
+        &:hover {
+            color: $primary-color;
+        }
+        
+        // font awesome links - hover
+        &:hover .fa {
+            color: $tertiary-color;
+        }
+    }
+}
+
+.footer-3 {
+    background-color: $quintiary-color;
+}

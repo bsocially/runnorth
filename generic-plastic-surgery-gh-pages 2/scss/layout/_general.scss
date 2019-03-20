@@ -1,0 +1,4 @@
+// make content wrapper flex container for sticky footer
+.wrapper {
+    @include flex(column, space-between);
+}

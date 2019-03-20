@@ -1,0 +1,69 @@
+header{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+    @media  #{$brk-1} {
+        text-align: initial;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .contact-info-container
+    {
+        display: inline-block;
+        
+        #language-toggle {
+        padding: 0 0 5px 0;
+            
+            @media  #{$brk-2} {
+                text-align: center;
+            }
+        }
+        
+        #phone {
+            float: left;
+            margin-right: 15px; // seperate from social container
+            margin-left: -$fa-padding; // move the phone icon to the left as much as the padding displaces it
+        
+            @media  #{$brk-2} {
+                margin-left: 0;
+                margin-right: 0; // this padding no long needed
+            }
+        }
+        
+        .social-container {
+            text-align: center;
+        }
+        
+         @media  #{$brk-2} {
+            @include flex(column);
+            float: right;
+        }
+    }
+    
+    .header-container {
+        
+        max-width: $content-max-width;
+        margin: auto;
+        
+        // logo text
+        .logo-text-container {
+            
+        height: $header-height;
+        
+            @media  #{$brk-2} {
+                float: left;
+                height: initial;
+            }
+        }
+        
+        #aesthetic {
+        padding: 7.5px 0px;
+        }
+        
+        .fa {
+        padding: 5px $fa-padding;
+        }
+    }
+}

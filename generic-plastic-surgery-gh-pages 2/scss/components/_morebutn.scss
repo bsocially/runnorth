@@ -1,0 +1,54 @@
+.more-btn {
+    border: 1.5px solid $secondary-color;
+    color: $secondary-color;
+    font-size: $main-font-size * 1.25;
+    width: ($main-font-size * 1.25) * 8;
+    padding: (($main-font-size * 1.25) / 4);
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    
+    a {
+        color: $secondary-color;
+    }
+}
+
+// more button in the about section
+#about-more-btn {
+    display: block;
+    margin-top: 20px;
+    
+    @media  #{$brk-7} {
+        margin-bottom: 0;
+    }  
+}
+
+// in parallax with black background
+#parallax-2 .more-btn {
+    border-color: $primary-color;
+    color: $primary-color;
+}
+
+// hover over button effects
+.more-btn:hover {
+    @include ease;
+    color: $tertiary-color !important;
+    border-color: $tertiary-color !important;
+    background-color: rgba($quintiary-color, .3);
+}
+
+// more buttons in gallery
+.gallery-cell .more-btn {
+    font-size: 1.25rem;
+    padding: 2.5px;
+    width: 100px;
+    
+    @media  #{$brk-3} {
+        font-size: $main-font-size * .9;
+    }
+    
+    @media  #{$brk-6} {
+        font-size: $main-font-size * 1.2;
+        width: 175px;
+    }      
+}

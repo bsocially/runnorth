@@ -1,0 +1,46 @@
+// h2 headers (in section)
+section h2 {
+    color: $tertiary-color;
+}
+
+// gallery cell text
+.gallery-text-container {
+    background: $text-background-color;
+}
+
+// module container
+.module-container {
+    a {
+        color: $tertiary-color;
+    }
+}
+
+// parallax - 1
+#parallax-1 {
+    background-image: url('../img/face-lift.jpeg');
+}
+
+// parallax - 2
+#parallax-2 {
+    background-image: url('../img/breast-aug.jpeg');
+    color: $primary-color !important; // because of black background
+}
+
+// parallax - 3
+#parallax-3 {
+    background-image: url('../img/lipo.jpeg');
+}
+
+// parallax - 4
+#parallax-4 {
+    background-image: url('../img/non-invasive.jpeg');
+}
+
+// parallax container
+.parallax-container {
+    background: $text-background-color;
+    
+    hr {
+        background-color: $secondary-color !important;
+    }
+}

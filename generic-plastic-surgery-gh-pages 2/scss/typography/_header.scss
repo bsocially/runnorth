@@ -1,0 +1,23 @@
+// logo
+.logo-text {
+    font: {
+        family: $main-font;
+        weight: 300;
+        size: 4rem;
+    }
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+#aesthetic {
+    letter-spacing: 10px;
+}
+
+// header contact info
+header .contact-info-container {
+    
+    font-size: $main-font-size * .9;
+
+    @media  #{$brk-9} {
+        font-size: $main-font-size * 1.05;
+    }    
+}

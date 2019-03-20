@@ -1,0 +1,217 @@
+///// THIS PARTIAL IS EXTREMELY MESSY AND NEEDS TO BE LOOKED OVER
+////  AND FIXED. IT HAS A LOT OF REPETITIVE AND PLAIN BAD CODE
+/////////////////////////////////////////////////////////////////
+
+
+
+.navbar * {
+    color: initial !important;
+    background-color: initial !important;
+}
+
+@media (min-width: $navbar-toggle-width) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+    
+    .navbar-brand {
+        display: none;
+    }
+    
+    .navbar-collapse {
+    background-color: $quintiary-color !important;
+    
+        .dropdown-menu {
+            background-color: #fff !important;
+        }
+        
+        .dropdown-submenu ul {
+            background-color: #fff !important;
+        }
+    }
+    
+    .dropdown a:active, .dropdown a:visited {
+        background: #fff !important;
+    }
+    
+}
+
+// media queries above
+//-----------------------------------------
+// below is borrowed code
+
+.marginBottom-0 {
+    margin-bottom:0;
+    }
+.dropdown-submenu {
+    position:relative;
+    }
+.dropdown-submenu>.dropdown-menu {
+    top:0;
+    left:100%;
+    margin-top:-6px;
+    margin-left:-1px;
+    -webkit-border-radius:0 6px 6px 6px;
+    -moz-border-radius:0 6px 6px 6px;
+    border-radius:0 6px 6px 6px;
+    }
+.dropdown-submenu>a:after {
+    display:block;content:" ";
+    float:right;width:0;
+    height:0;
+    border-color:transparent;
+    border-style:solid;
+    border-width:5px 0 5px 5px;
+    border-left-color:$primary-color;
+    margin-top:5px;
+    margin-right:-10px;
+    }
+.dropdown-submenu:hover>a:after {
+    border-left-color:$primary-color;
+    }
+.dropdown-submenu.pull-left {
+    float:none;
+    }
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left:-100%;
+    margin-left:10px;
+    -webkit-border-radius:6px 0 6px 6px;
+    -moz-border-radius:6px 0 6px 6px;
+    border-radius:6px 0 6px 6px;
+    }
+    
+// above is borrowed code
+//---------------------------------------------
+// below is modified code
+
+.navbar {
+    height: $navbar-height;
+    background-color: $quintiary-color;
+    border: none;
+    font-family: $main-font;
+    font-size: $nav-font-size !important;
+    
+    @media  #{$brk-6} {
+        font-size: $nav-font-size * 1.15 !important;
+    }
+    
+    // navbar brand link (don't know why it's nav-link, but it works)
+    .nav-link {
+        background-color: $tertiary-color; 
+        margin-left: 2.5%;   
+    }
+    
+    // navbar brand link span
+    .navbar-brand {
+         
+        span {
+            padding: 5.2px 10px;
+            background-color: #fff !important;
+            border: 1px solid $secondary-color !important;
+            border-radius: 2.5px;
+            text-transform: uppercase;
+            color: $secondary-color !important;
+        }    
+        a {
+            color: $primary-color !important;
+        }
+        
+        span:hover {
+            background-color: $primary-color !important;
+            color: #fff !important;
+        }
+    }
+      
+    // navbar normal links        
+    a, a:visited, a:active {
+        color: $primary-color !important;
+        
+        &:hover {
+            color: $primary-color !important;
+        }
+        
+        @media  #{$brk-7} {
+            padding-left: 25px !important;
+            padding-right: 25px !important;
+        }
+        
+        @media  #{$brk-8} {
+            padding-left: 35px !important;
+            padding-right: 35px !important;
+        }    
+        
+        @media  #{$brk-9} {
+            padding-left: 45px !important;
+            padding-right: 45px !important;
+        }                                    
+    }
+    
+    // navbar active link
+    .active a, a:active, a:visited {
+    background-color: initial !important;
+    }
+    
+    // toggle icon
+    .navbar-toggle {
+        background: #fff !important;
+        border: 1px solid $secondary-color !important;
+        border-radius: 2.5px;
+        
+        .icon-bar {
+            background-color: $secondary-color !important;
+        }
+    }
+    
+    // hover toggle icon
+    .navbar-toggle:hover {
+        background-color: $primary-color !important;
+        
+        .icon-bar {
+            background-color: #fff !important;
+        }
+    }
+    
+    .navbar-collapse {
+        background-color: #fff;
+        
+        .dropdown-menu {
+            background-color: $quintiary-color;
+            border-radius: 0px !important;
+            font-family: $main-font;
+            font-size: $nav-font-size * 1 !important;
+        }
+        
+        .dropdown-submenu ul {
+            background-color: #fff !important;
+        }
+    }
+}
+
+// Very important for this to go work
+.navbar .dropdown a:active,
+.navbar .dropdown a:visited,
+.navbar .dropdown a:hover,
+ {
+        background: $quintiary-color !important;
+}
+
+@media screen and (max-width: #{$navbar-toggle-width}) {
+    
+    .navbar-collapse li, .navbard-collapse li:visited {
+        background-color: #fff !important;
+    }
+    
+    .navbar-collapse * {
+        border: #fff !important;
+    }
+
+    .navbar-collapse .dropdown-menu li li {
+        padding-left: 15px;
+    }
+}

@@ -1,0 +1,42 @@
+// h2 headers (in section)
+section h2 {
+    text-transform:uppercase;
+    @include lato-3;
+}
+
+.module h2,
+.parallax h2 {
+    font-size: section-h2-font-size;
+    
+    @media  #{$brk-3} {
+        font-size: $section-h2-font-size * 2.25;
+    }
+}
+
+section p {
+    font-size: $main-font-size;
+}
+
+.gallery-text-container h2 {
+    font-size: $section-h2-font-size;
+    
+    @media  #{$brk-3} {
+        font-size: $main-font-size * 1.25;
+    }
+
+    @media  #{$brk-6} {
+        font-size: $main-font-size * 1.5;
+    }        
+}
+
+.gallery-text-container p {
+    font-size: 1.25rem;
+    
+    @media  #{$brk-3} {
+        font-size: $main-font-size * .9;
+    }
+    
+    @media  #{$brk-6} {
+        font-size: $main-font-size;
+    }    
+}

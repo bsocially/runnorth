@@ -1,0 +1,65 @@
+// Font Stacks
+
+$main-font: 'Lato', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
+
+// Font Sizes
+
+$nav-font-size: 1.6rem;
+$main-font-size: 1.75rem; // normal text
+$section-h2-font-size: 1.75rem; // h2 headings
+$go-to-top-size: 50px; // go to top arrow
+
+// Colors
+
+$primary-color: #4e413a; // Taupe
+$secondary-color: #928a87; // Schooner
+$tertiary-color: #c25e00; // Rose of Sharon
+$quartiary-color: #e89e48; //Tulip Tree
+$quintiary-color: #ffdb99; // Cream Brulee
+
+$text-background-color: rgba(255,255,255,.6); // for text on top of images
+    // getstarted form
+    $field-font-color:#fff;// white
+
+// Dimensions
+
+$header-height: 160px; // make sure to adjust main.js scrolling value
+$navbar-height: 50px; // make sure to adjust main.js scrolling value
+
+$min-parallax-height: 480px; // minimum parallax height
+$max-parallax-height: 1500px; // max parallax height
+$max-parallax-text-height: $min-parallax-height - 20px;
+$max-parallax-text-width: 450px;
+
+    // Max and Min Widths
+    $content-max-width: 1200px; // max contnt width
+    $footer-max-width: 1000px; // max footer width
+    
+// Break Points
+
+$navbar-toggle-width: 768px; // width when the navbar toggles
+
+// Padding and Margins
+
+$fa-padding: 10px; // font-awesome padding
+$gallery-top-padding: .04*100vh;
+$gallery-bottom-padding: 30px;
+$module-parallax-side-padding: 10.55%; // add enough padding to not overlay with side-bar
+$section-heading-top-padding: 17.5px; // top padding for section headings
+$section-heading-bottom-padding: 17.5px; // bottom padding for section headings
+$footer-padding: 20px; // footer side padding
+
+// Media Query Breakpoints
+
+$brk-1: 'screen and (min-width: 450px)';
+$brk-2: 'screen and (min-width: 550px)';
+$brk-3: 'screen and (min-width: 650px)';
+$brk-4: 'screen and (min-width: 750px)';
+$brk-5: 'screen and (min-width: 850px)';
+$brk-6: 'screen and (min-width: 950px)';
+$brk-7: 'screen and (min-width: 1050px)';
+$brk-8: 'screen and (min-width: 1150px)';
+$brk-9: 'screen and (min-width: 1250px)';
+
+$height-350: 'screen and (max-height: 350px)';
